@@ -15,4 +15,10 @@ class TweetsController < ApplicationController
     def edit 
         @tweet = Tweet.find(params["id"])
     end
+
+    def update
+        tweet = Tweet.find(params["id"])
+        tweet.update content: params['content']
+        redirect_to action: :index
+    end
 end

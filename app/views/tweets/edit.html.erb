@@ -2,6 +2,6 @@
 
 <%= form_for @tweet do %>
     <label>Content:</label>
-    <textarea name="content" value="<%= @tweet.content %>"></textarea>
+    <input type="text" name="content" value="<%= @tweet.content %>"/>
     <button type0="submit"> Save! </button>
 <% end %>
