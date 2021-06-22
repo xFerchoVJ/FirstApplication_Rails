@@ -1,0 +1,7 @@
+<h1>Update Tweet</h1>
+
+<%= form_for @tweet do %>
+    <label>Content:</label>
+    <textarea name="content" value="<%= @tweet.content %>"></textarea>
+    <button type0="submit"> Save! </button>
+<% end %>

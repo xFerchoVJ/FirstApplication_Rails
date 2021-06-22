@@ -1,0 +1,14 @@
+<h1>Tweets</h1>
+<a href="<%= new_tweet_path %>"><button>New Tweet</button></a>
+<hr>
+<% @tweets.each do |tweet| %>
+    <div style="outline: 1px solid gray; margin-bottom: 1em; padding: 0.2em">
+        <h3 style="color: gray">Twatter user</h3>
+        <div style="font-size: 15pt; padding: .3em;">
+            <%= tweet.content %>
+        </div>
+        <div>
+            <%= link_to "Editar", edit_tweet_path(tweet)%>
+        </div>
+    </div>
+<% end %>
