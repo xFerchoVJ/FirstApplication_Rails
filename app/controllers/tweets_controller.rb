@@ -21,4 +21,10 @@ class TweetsController < ApplicationController
         tweet.update content: params['content']
         redirect_to action: :index
     end
+
+    def destroy
+        tweet = Tweet.find(params["id"])
+        tweet.destroy
+        redirect_to action: :index
+    end
 end
